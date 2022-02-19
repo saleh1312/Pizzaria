@@ -59,8 +59,9 @@ def get_best(clns):
     bad=list(set(bad))
 
     confirmed=[item for item in good if item not in bad]
+    not_confirmed=[item for item in good if item in bad]
     
-    return recursion(clns,confirmed,bad)
+    return recursion(clns,confirmed,not_confirmed)
 
 
 
