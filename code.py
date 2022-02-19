@@ -42,12 +42,12 @@ def recursion(clients,conf,bad):
     
 
     yes_score,c=recursion(clients ,conf+[bad[0]],bad[1:])
-    no_score,c=recursion(clients ,conf,bad[1:])
+    no_score,c2=recursion(clients ,conf,bad[1:])
     
     if yes_score > no_score:
         return yes_score,c
     else:
-        return no_score,c
+        return no_score,c2
     
 def get_best(clns):
     good=[]
